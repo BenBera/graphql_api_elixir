@@ -21,7 +21,6 @@ defmodule BookStoreApi.Store do
   def create_book(attrs \\ %{}) do
     %Books{}
     |> Books.changeset(attrs)
-    |> Repo.preload(:reviews)
     |> Repo.insert()
   end
 
@@ -75,7 +74,8 @@ defmodule BookStoreApi.Store do
   @spec get_book_with_review(%{:id => any, optional(any) => any}) ::
           nil | [%{optional(atom) => any}] | %{optional(atom) => any}
   def get_book_with_review(%{id: id}) do
-    Repo.get!(Books, id)
+    Books
+    |> Repo.get!(id)
     |> Repo.preload(:reviews)
   end
 
