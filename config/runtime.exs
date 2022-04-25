@@ -40,8 +40,8 @@ if config_env() == :prod do
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("PHX_HOST") || "example.com"
-  port = String.to_integer(System.get_env("PORT") || "80")
+  host = System.get_env("PHX_HOST") || "mysterious-shelf-0497.herokuapp.com"
+  port = String.to_integer(System.get_env("PORT") || "4000")
 
   config :book_store_api, BookStoreApiWeb.Endpoint,
     url: [host: host, port: 443],
