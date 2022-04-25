@@ -1,7 +1,5 @@
 defmodule BookStoreApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :book_store_api
-  socket "/socket", BookStoreApiWeb.UserSocket,
-    websocket: [timeout: 45_000]
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
