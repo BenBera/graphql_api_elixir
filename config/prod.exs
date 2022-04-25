@@ -11,7 +11,7 @@ import Config
 # before starting your production server.
 config :book_store_api, BookStoreApiWeb.Endpoint,
   load_from_system_env: true,
-  url: [scheme: "https", host: "mysterious-shelf-0497.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "dry-refuge-23859.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
